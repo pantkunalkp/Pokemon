@@ -2,13 +2,14 @@ import React from "react";
 import Pokemon from "./component/pokemon/Pokemon.jsx";
 import data from "./data/pokemons.json";
 import { Container, Row, Col } from "react-bootstrap";
+import "./App.css"
 
 const App = () => {
   return (
-    <div>
+    <div className = "app">
       <Container>
         <Row>
-          {data.filter((item)=> item["base"]["Speed"]>50).map((item) => (
+          {data.map((item) => (
             <Col>
               <Pokemon details={item} />
             </Col>
